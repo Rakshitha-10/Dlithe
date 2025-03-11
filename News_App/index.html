@@ -139,7 +139,7 @@ nav ul li a:hover {
 }
 
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {                
     display: block;
 }
 
@@ -159,7 +159,12 @@ nav ul li a:hover {
 .hidden {
     display: none;
 }
-
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
     </style>
 </head>
@@ -169,6 +174,24 @@ nav ul li a:hover {
     <h1>News Today</h1>
     <p>Stay Informed with the Latest Updates</p>
 </header>
+<div class="main-container">
+    <div class="register-container">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
 
 <nav>
     <ul>
@@ -301,17 +324,26 @@ nav ul li a:hover {
 </footer>
 <script>
 
-
-
+   
+       
+    
+document.querySelectorAll('.dropdown').forEach(menu => {
+    let dropdownMenu = menu.querySelector('.dropdown-menu');
+    menu.querySelector('a').onclick = () => dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
 document.querySelectorAll("nav ul li a").forEach(a => {
     a.onclick = e => {
         e.preventDefault();
-        let category = a.textContent.trim(); // Get selected category
-
+        
         document.querySelectorAll(".news-section").forEach(s => {
-            s.style.display = (category === "Home" || s.querySelector(".news-meta").textContent.includes(category)) 
-                ? "block" 
-                : "none";
+            let category = a.textContent.trim();
+            let newsMeta = s.querySelector(".news-meta").textContent;
+
+            if (category === "Home" || newsMeta.includes(category)) {
+                s.style.display = "block";
+            } else {
+                s.style.display = "none";
+            }
         });
     };
 });
