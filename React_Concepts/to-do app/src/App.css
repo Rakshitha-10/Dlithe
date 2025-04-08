@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Container */
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+/* To-Do Box */
+.todo-box {
+  padding: 10px;
+}
+
+/* Heading */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.task-item {
+  background: #e9ecef;
+  padding: 10px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Buttons */
+.done-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.done-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+}
