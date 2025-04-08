@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World - Travel Agency</title>
+    <style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background: linear-gradient(to right, #8e44ad, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .container {
+            width: 85%;
+            max-width: 1300px;
+            margin: auto;
+            padding: 40px;
+        }
+        .section {
+            background: #1e1e2f;
+            padding: 50px;
+            margin: 30px 0;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(142, 68, 173, 0.3);
+        }
+        h2 {
+            color: #ffcc00;
+            border-bottom: 4px solid #ffcc00;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .details-container {
+            display: none;
+            padding: 30px;
+            background: #22223b;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(255, 204, 0, 0.3);
+            margin-top: 25px;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input[type="radio"]:checked + .details-container {
+            display: block;
+        }
+        label {
+            display: block;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 12px 0;
+            color: #ffcc00;
+            transition: color 0.3s, transform 0.3s;
+        }
+        label:hover {
+            color: #ff5733;
+            transform: scale(1.05);
+        }
+        .destination img {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+            filter: brightness(0.85);
+            transition: transform 0.3s;
+        }
+        .destination img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(to right, #8e44ad, #c0392b);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        
+        .read-more {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 20px;
+            background-color: #ffcc00;
+            color: #121212;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        
+        }
+        .read-more:hover {
+            background-color: #ff5733;
+            color: white;
+        }
+        #greeting {
+                font-size: 22px;
+                font-weight: bold;
+                color: #ffcc00;  /* Bright yellow for visibility */
+                margin-top: 10px;
+        }
+            
+        
+    </style>
+    
+    
+    
+    
+</head>
+<body>
+  
+        
+   
+
+
+    <header>
+        <h1>Explore World - Travel Agency</h1>
+        <p>Your gateway to unforgettable journeys</p>
+        <p id="greeting"></p> <!-- Greeting will be displayed here -->
+    </header>
+    
+  
+
+
+<div class="container">
+    <div class="section">
+        <h2>Popular Destinations in India</h2>
+        
+        <label for="coorg-details">Coorg, Karnataka </label>
+        <input type="radio" id="coorg-details" name="destination">
+        <div class="details-container">
+            <img src="2.jpeg" alt="Coorg">
+            <p><b>Package:</b> 3 Days, 2 Nights</p>
+            <p><b>Places to Visit:</b> Abbey Falls, Raja's Seat, Dubare Elephant Camp</p>
+            <p><b>Price:</b> ₹12,500 per person</p>
+            <p><b>Pickup Point: Bangalore</b></p>
+            <p><b>Includes:</b> AC Transport, Hotel, Breakfast, Sightseeing</p>
+        </div>
+        
+        <label for="ooty-details">Ooty, Tamil Nadu </label>
+        <input type="radio" id="ooty-details" name="destination">
+        <div class="details-container">
+            <img src="1.jpeg" alt="Ooty">
+            <p><b>Package:</b> 3 Days, 2 Nights</p>
+            <p><b>Places to Visit:</b> Ooty Lake, Botanical Garden, Doddabetta Peak</p>
+            <p><b>Price:</b> ₹14,000 per person</p>
+            <p><b>Pickup Point: Bangalore</b></p>
+            <p><b>Includes:</b> AC Transport, Hotel, Breakfast, Sightseeing</p>
+        </div>
+        
+        <label for="jaipur-details">Jaipur, Rajasthan </label>
+        <input type="radio" id="jaipur-details" name="destination">
+        <div class="details-container">
+            <img src="3." alt="Jaipur">
+            <p><b>Package:</b> 4 Days, 3 Nights</p>
+            <p><b>Places to Visit:</b> Hawa Mahal, Amber Fort, City Palace, Jantar Mantar</p>
+            <p><b>Price:</b> ₹18,000 per person</p>
+            <p><b>Pickup Point: Bangalore</b></p>
+            <p><b>Includes:</b> Flight, Hotel, Breakfast, Sightseeing</p>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="section">
+            <h2>Our Services</h2>
+            <label for="flights">Flight Bookings</label>
+            <input type="radio" id="flights" name="services">
+            <div class="details-container">
+                <p>We provide economy, business, and first-class tickets at competitive prices.</p>
+                <ul>
+                    <li><b>Economy Class:</b> Affordable and comfortable seating.</li>
+                    <li><b>Business Class:</b> Extra legroom, premium meals, and priority boarding.</li>
+                    <li><b>First Class:</b> Luxurious private suites with gourmet dining.</li>
+                </ul>
+            </div>
+            
+            <label for="hotels">Hotel Accommodations</label>
+            <input type="radio" id="hotels" name="services">
+            <div class="details-container">
+                <p>Choose from budget-friendly stays to luxury resorts.</p>
+                <ul>
+                    <li><b>Budget Hotels:</b> Affordable yet comfortable rooms.</li>
+                    <li><b>Luxury Resorts:</b> 5-star amenities with breathtaking views.</li>
+                    <li><b>Premium Suites:</b> Exclusive stays with personalized services.</li>
+                </ul>
+            </div>
+            
+            <label for="tours">Tour Packages</label>
+            <input type="radio" id="tours" name="services">
+            <div class="details-container">
+                <p>We offer customized tour packages, including adventure, culture, and heritage tours.</p>
+                <ul>
+                    <li><b>City Tours:</b> Explore vibrant urban landscapes.</li>
+                    <li><b>Adventure Tours:</b> Trekking, water sports, and wildlife safaris.</li>
+                    <li><b>Cultural Tours:</b> Discover historical monuments and traditions.</li>
+                </ul>
+            </div>
+            
+            <label for="car-rentals">Car Rentals</label>
+            <input type="radio" id="car-rentals" name="services">
+            <div class="details-container">
+                <p>Rent economy, SUVs, and luxury cars with or without a driver.</p>
+                <ul>
+                    <li><b>Economy Cars:</b> Affordable and fuel-efficient options.</li>
+                    <li><b>SUVs:</b> Spacious and powerful vehicles for long drives.</li>
+                    <li><b>Luxury Cars:</b> Premium cars like BMW, Mercedes, and Audi.</li>
+                </ul>
+            </div>
+            
+            <label for="cruises">Cruise Trips</label>
+            <input type="radio" id="cruises" name="services">
+            <div class="details-container">
+                <p>Enjoy breathtaking views and luxury experiences on our cruise trips.</p>
+                <ul>
+                    <li><b>Domestic Cruises:</b> Explore India's scenic coastlines.</li>
+                    <li><b>International Cruises:</b> Travel across the oceans in style.</li>
+                    <li><b>Luxury Yachts:</b> Private yacht experiences for ultimate luxury.</li>
+                </ul>
+            </div>
+        </div>
+        <a href="contact.html" class="read-more">Read More / Enquire</a>
+    </div>
+    
+    <
+</div>
+
+<footer>
+    <p>&copy; 2025 Explore World Travel Agency. All rights reserved.</p>
+</footer>
+<script>
+    let hours = new Date().getHours();
+    let greetingText = (hours < 12) ? "Good Morning, Traveler!" :
+                       (hours < 18) ? "Good Afternoon, Adventurer!" :
+                                      "Good Evening, Explorer!";
+
+    document.getElementById("greeting").innerText = greetingText;
+</script>
+
+</body>
+</html>
